@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Dhiren Kakkar</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <script src="jquery.min.js"></script>
+        <script src="repo.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div class="nav-wrapper">
+                <div class="left-side">
+                    <div class="nav-link-wrapper">
+                        <a href="index.html">About Me</a>
+                    </div>
+                    <div class="nav-link-wrapper active-nav-link">
+                        &nbsp; 
+                        <a href="swe.html">Programming</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        &nbsp; 
+                        <a href="ds.html">Data science</a>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div class="references">
+                        <a href="https://github.com/dhirenkakkar" class="fa fa-github"></a>
+                        <a href="https://www.linkedin.com/in/dhirenkakkar/" class="fa fa-linkedin"></a>
+                        <a href="mailto:dhirenkakkar@gmail.com" class="fa fa-envelope"></a>
+                    </div>
+                </div>   
+            </div>
+            <div class="ds-content-wrapper">
+                    <div class="projects-title">
+                            <h1><b>Projects and skills</b></h1>
+                        </div>
+        
+                        <div class="ds-projects-wrapper">
+                            <div class="portfolio-items-wrapper">
+                                <div class="portfolio-item-wrapper">
+                                    <div class="portfolio-img-background" style="background-image:url(images/eats.png)"></div>
+                                    <div class="img-text-wrapper">
+                                        <div class="subtitle"><b>(nwHacks'19) UBC Eats - Web scraping using Seleneum's automated button clicks
+                                             and a Web application that integrates the data flow pipelines.
+                                        </b></div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-item-wrapper">
+                                    <div class="portfolio-img-background" style="background-image:url(images/transit.png)"></div>
+                                    <div class="img-text-wrapper">
+                                        <div class="subtitle"><b>Buses R'Us - Geolocation tracking by real time information retrieval using
+                                            translink open API, UML class design and JUnit testing 
+                                        </b></div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-item-wrapper">
+                                    <div class="portfolio-img-background" style="background-image:url(images/upass.png)"></div>
+                                    <div class="img-text-wrapper">
+                                        <div class="subtitle"><b>Upass requester - automation script using python and seleneum to request for 
+                                            the monthly upass renewal, used cronjob for automatically calling the script every month.      
+                                             </b></div>
+                                    </div>
+                                </div>
+                                <div class="portfolio-item-wrapper">
+                                    <div class="portfolio-img-background" style="background-image:url(images/crawler.png)"></div>
+                                    <div class="img-text-wrapper">
+                                        <div class="subtitle"><b>Web crawler - Used Jsoup JAR to form the HTTP request and parse the
+                                            user-provided word from the user-provided url.
+                                        </b></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                <div class="skills">
+                    <div class="swe-tools">
+                        <b>Tools:</b>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>C++</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>UNIX</li>
+                        <li>Github</li>
+                    </div>
+                    <div class="swe-concepts">
+                        <b>Concepts:</b>
+                        <li>Data structures & Algorithms</li>
+                        <li>Object oriented programming</li>
+                        <li>Composite/Observer design patterns </li>
+                        <li>JUnit testing and debugging</li>
+                        <li>Scripting and automation</li>
+                        <li>Parsing (TXT/XML/CSV/XLSX)</li>
+                        <li>Threads, locks and semaphores</li>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </body>
+
+
+    <script>
+            const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+            portfolioItems.forEach(portfolioItem => {
+              portfolioItem.addEventListener('mouseover', () => {
+                console.log(portfolioItem.childNodes[1].classList)
+                portfolioItem.childNodes[1].classList.add('image-blur');
+              });
+                portfolioItem.addEventListener('mouseout', () => {
+                console.log(portfolioItem.childNodes[1].classList)
+                portfolioItem.childNodes[1].classList.remove('image-blur');
+              });
+            });
+        </script>
+</html>
+

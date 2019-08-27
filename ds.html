@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+    <head>
+        <meta charset="utf-8">
+        <title>Dhiren Kakkar</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <script src="jquery.min.js"></script>
+        <script src="repo.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+
+            <div class="nav-wrapper">
+                <div class="left-side">
+                    <div class="nav-link-wrapper">
+                        <a href="index.html">About Me</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        &nbsp; 
+                        <a href="swe.html">Programming</a>
+                    </div>
+                    <div class="nav-link-wrapper active-nav-link">
+                        &nbsp; 
+                        <a href="ds.html">Data science</a>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div class="references">
+                        <a href="https://github.com/dhirenkakkar" class="fa fa-github"></a>
+                        <a href="https://www.linkedin.com/in/dhirenkakkar/" class="fa fa-linkedin"></a>
+                        <a href="mailto:dhirenkakkar@gmail.com" class="fa fa-envelope"></a>
+                    </div>
+                </div>   
+            </div>
+            <div class="ds-content-wrapper">
+                <div class="projects-title">
+                    <h1><b>Projects and skills</b></h1>
+                </div>
+
+                <div class="ds-projects-wrapper">
+                    <div class="portfolio-items-wrapper">
+                        <div class="portfolio-item-wrapper">
+                            <div class="portfolio-img-background" style="background-image:url(images/house.png)"></div>
+                            <div class="img-text-wrapper">
+                                <div class="subtitle"><b>(Kaggle) Housing prices - Linear/Lasso/Ridge/ElasticNet Regression. Top 5%
+                                    out of 4,500 teams.
+                                </b></div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item-wrapper">
+                            <div class="portfolio-img-background" style="background-image:url(images/titanic.png)"></div>
+                            <div class="img-text-wrapper">
+                                <div class="subtitle"><b></b>(Kaggle) Titanic - Random forest and grid search. Top 4% out of 11,000 teams.</div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item-wrapper">
+                            <div class="portfolio-img-background" style="background-image:url(images/eats.png)"></div>
+                            <div class="img-text-wrapper">
+                                <div class="subtitle"><b>UBC Eats - Web scraping using Seleneum's automated button clicks, Visualizations and a Web application 
+                                    that integrates the data flow pipelines.                               
+                                     </b></div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item-wrapper">
+                            <div class="portfolio-img-background" style="background-image:url(images/dman.png)"></div>
+                            <div class="img-text-wrapper">
+                                <div class="subtitle"><b>Premier league review - Data wrangling, visualizations and analysis</b></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills">
+                    <div class="tools">
+                        <b>Tools:</b>
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>Tensorflow</li>
+                        <li>Google cloud</li>
+                        <li>Jupyter Notebook</li>
+                        <li>Tableau</li>
+                        <li>Github</li>
+                    </div>
+                    <div class="concepts">
+                        <b>Concepts:</b>
+                        <li>Regression (Linear/Lasso/Ridge/ElasticNet)</li>
+                        <li>Classification (Random-forest/KNN/SVM)</li>
+                        <li>Unsupervised learning (K-means clustering)</li>
+                        <li>Neural networks and deep learning</li>
+                        <li>Boosting (AdaBoost, XGBoost, LightGBM)</li>
+                        <li>Ensembling and blending</li>
+                        <li>Relational databases </li>
+                    </div>
+                    <div class="libraries">
+                        <b>DS Libraries:</b>
+                        <li>Pandas</li>
+                        <li>Numpy</li>
+                        <li>SciPy</li>
+                        <li>Matplotlib</li>
+                        <li>Seaborn</li>
+                        <li>Scikit-learn</li>
+                        <li>Keras</li>
+                    </div>
+                </div>    
+            </div>
+
+        </div>
+    </body>
+
+    <script>
+        const portfolioItems = document.querySelectorAll('.portfolio-item-wrapper');
+        portfolioItems.forEach(portfolioItem => {
+          portfolioItem.addEventListener('mouseover', () => {
+            console.log(portfolioItem.childNodes[1].classList)
+            portfolioItem.childNodes[1].classList.add('image-blur');
+          });
+            portfolioItem.addEventListener('mouseout', () => {
+            console.log(portfolioItem.childNodes[1].classList)
+            portfolioItem.childNodes[1].classList.remove('image-blur');
+          });
+        });
+    </script>
+
+</html>
+
